@@ -28,7 +28,7 @@
   			hide-on-clear = false;
   			hide-on-action = true;
   			script-fail-notify = true;
-  			text-empty = "Nothing here";
+  			text-empty = "awhh ;<. nothing here 3:";
   			widgets = [
 			   "buttons-grid"
  			   "volume"
@@ -86,6 +86,11 @@
           			command = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
           			type = "toggle";
         			}
+				{
+				label = "󰈅";
+				command = "swaync-client -d";
+				type = "toggle";
+				}
       				];
 			};
   			};

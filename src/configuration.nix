@@ -32,10 +32,9 @@ in
   environment.systemPackages = [
     inputs.zen-browser.packages.${pkgs.system}.default
     pkgs.swww
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   
-  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
+  fonts.packages = with pkgs.nerd-fonts; [ bigblue-terminal ];
 
 
 
@@ -46,7 +45,7 @@ in
                   username = settings.userName; 
                   homeDirectory = settings.homeDirectory;
                   stateVersion = "25.05";
-                };
+        };
 
 
 

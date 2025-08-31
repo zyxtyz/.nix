@@ -10,19 +10,21 @@
  	 in
 	    {
 		enable =  lib.mkForce true;
-		enabledExtensions = [
-	 		spicePkgs.extensions.adblock
-	 		spicePkgs.extensions.hidePodcasts
-			spicePkgs.extensions.loopyLoop
-			spicePkgs.extensions.powerBar
-			spicePkgs.extensions.copyToClipboard
-			spicePkgs.extensions.volumePercentage
-			spicePkgs.extensions.fullAppDisplay
-			{
-					 name = "nightcore.js";
-				 	 src = ./extensions;
-				         appendName = true;
-			}
+
+		
+		
+			 enabledExtensions = with spicePkgs.extensions; [
+	 			 adblock
+	 			 hidePodcasts
+				 loopyLoop
+				 fullAppDisplay
+				 bestMoment
+				 allOfArtist
+				 {
+					 	 name = "nightcore.js";
+				 	 	 src = ./extensions;
+				        	 appendName = true;
+				 }
 
 	 		];
 
