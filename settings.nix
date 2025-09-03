@@ -1,6 +1,8 @@
  { ... }:
  rec {
-	
+        theme = "DarkForest";
+	wallpaperNumber = 0;
+	 # -----------------------------------------
 	fileManager = "xplr";
 	homeDirectory = "/home/zyxtyz";
 	userName = "zyxtyz";
@@ -15,9 +17,6 @@
 		scale = "1";
 	};
 	shell = "zsh";
-	widgetsDir = "../qs";
-	scriptsDir = "/home/zyxtyz/.zyxtyz/pkgs/scripts";
-	cursor = "pkgs.comixcursors";
 	pkgs = [
 		"hyprland"
 		"${terminal}"
@@ -31,6 +30,6 @@
 		"xplr"
 	 ];	
 	
-}
-	
-	
+ }
+
+

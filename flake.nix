@@ -25,6 +25,7 @@
     };
     nixcord = {
       url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
   };
 };
   outputs = { self, nixpkgs, home-manager, stylix, nixvim, nixcord, zen-browser, ... }@inputs: 

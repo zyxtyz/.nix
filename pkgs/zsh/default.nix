@@ -18,12 +18,10 @@ home-manager.users.${settings.userName} = {
 		 enableCompletion = true;
 		 syntaxHighlighting.enable = true;
 	 	 initContent = ''
-
 			eval "$(starship init zsh)"
 			 '';
 		  shellAliases = {
 			bai = "shutdown now";
-			config = "cd ~/.zyxtyz && nvim ~/.zyxtyz/";
 			bios = "sudo systemctl reboot --firmware-setup";
 
 		};

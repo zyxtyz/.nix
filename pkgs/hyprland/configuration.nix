@@ -8,7 +8,7 @@
       monitor = [ "${settings.monitor.name}, ${settings.monitor.resolution}@${settings.monitor.hz}, 0x0, ${settings.monitor.scale}" ];
 
       exec-once = [
-        "swww-daemon"
+        "wpaperd"
 	      "mpd"
 	];
 
