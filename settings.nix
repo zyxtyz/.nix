@@ -1,10 +1,9 @@
  { ... }:
  rec {
-        theme = "DarkForest";
-	wallpaperNumber = 0;
+        theme = "DarkForest";  # BlackAndWhite, DarkForest, SnowWhiteTrees, SeaDawn, PurpleOnyx, RosePine, TokyoNight-Night
 	 # -----------------------------------------
 	fileManager = "xplr";
-	homeDirectory = "/home/zyxtyz";
+	homeDirectory = "/home/${userName}";
 	userName = "zyxtyz";
 	hostName = "nixos";
 	timeZone = "Europe/Bucharest";
@@ -28,6 +27,7 @@
 		"spicetify"
 		"swaync"
 		"xplr"
+		 #"sway"
 	 ];	
 	
  }

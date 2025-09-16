@@ -23,12 +23,13 @@
   			control-center-height = 1033;
   			notification-window-width = 500;
   			keyboard-shortcuts = true;
-  			image-visibility = "when-available";
+  			image-visibility = "always";
   			transition-time = 200;
   			hide-on-clear = false;
   			hide-on-action = true;
   			script-fail-notify = true;
-  			text-empty = "awhh ;<. nothing here 3:";
+  			text-empty = "No Notifications Yet :(";
+
   			widgets = [
 			   "buttons-grid"
  			   "volume"
@@ -51,6 +52,7 @@
     			mpris = {
       			image-size = 100;
       			image-radius = 3;
+			show-album-art = "always";
       			blacklist = [
         			"kew"
         			"firefox"

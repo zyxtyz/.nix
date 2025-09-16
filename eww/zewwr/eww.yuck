@@ -1,0 +1,14 @@
+(include "./modules/bar/bar.yuck" )
+
+
+(defwindow zewwr
+	:monitor 0
+	:geometry (geometry :anchor "top center"
+			    :x "0%"
+			    :y "5px"
+			    )
+	:stacking "fg"
+	:exclusive true
+	(bar))
+
+;hope you guys love this rice <33 

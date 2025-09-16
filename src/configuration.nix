@@ -8,9 +8,9 @@ in
     [ 
       ./hardware-configuration.nix
     ] ++ map path settings.pkgs;
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = true;
+ 	hardware.bluetooth.enable = true;
+	hardware.bluetooth.powerOnBoot = true;
+	services.blueman.enable = true;
   programs.hyprland.enable = true;
   users.users.${settings.userName} = {
 	isNormalUser = true;
@@ -31,10 +31,7 @@ in
 
   environment.systemPackages = [
     inputs.zen-browser.packages.${pkgs.system}.default
-    pkgs.swww
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-  
-  fonts.packages = with pkgs.nerd-fonts; [ bigblue-terminal ];
+  ];
 
 
 
