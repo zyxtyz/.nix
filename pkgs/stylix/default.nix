@@ -1,46 +1,37 @@
- { pkgs, settings, config, lib, ... }:
-let
-  theme = import ./colorSchemes.nix {};
-  wallpaper = builtins.elemAt theme.${settings.theme}.wallpapers 0;
-  in
 {
-	stylix = {
-		autoEnable = true;
-		enable = true;
-		base16Scheme = theme.${settings.theme}.colorScheme;
-	        fonts = {
-    			serif = {
-      				package = pkgs.texlivePackages.gnu-freefont;
-      				name = "gnu free font aagain (until i find another :] )";
-    			};
+  pkgs,
+  settings,
+  config,
+  lib,
+  ...
+}:
+{
 
-    			sansSerif = {
-      				package = pkgs.nerd-fonts.comic-shanns-mono;
-      				name = "comic shanns mono";
-    			};
+  environment.systemPackages = with pkgs; [ adwaita-icon-theme ];
+  stylix = {
+    enable = true;
+    image = ./transparent_1x1.png;
+    fonts = {
+      serif = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "";
+      };
 
-    			monospace = {
-      				package = pkgs.texlivePackages.gnu-freefont;
-      				name = "gnu-free-font";
-    			};
+      sansSerif = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "";
+      };
 
-    			emoji = {
-      				package = pkgs.nerd-fonts.symbols-only;
-      				name = "Nerd Font Symbols";
-    			};
-  		};
-	 };
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "";
+      };
 
-	home-manager.users.${settings.userName} = {
-		services.wpaperd = {
-	 		enable = true;
-		 	settings = {
-		 		${settings.monitor.name} = {
-		 			path = "${settings.homeDirectory}/.nix/wallpapers/${wallpaper}";
+      emoji = {
+        package = pkgs.nerd-fonts.symbols-only;
+        name = "";
+      };
+    };
+  };
 
-		 		};
-		 	};
-		};
-		
-	};
 }
